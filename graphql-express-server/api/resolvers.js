@@ -3,6 +3,7 @@ const {
   getMovies,
   getMovie,
   getPeople,
+  getPerson,
   newPerson,
   getDirector,
   getStars,
@@ -15,13 +16,13 @@ const resolvers = {
       return getMovies()
     },
     movie(root, { id }) {
-      return getMovie(root, id)
+      return getMovie(id)
     },
     people() {
       return getPeople()
     },
     person(root, { id }) {
-      return getPerson(root, id)
+      return getPerson(id)
     }
   },
   Mutation: {
